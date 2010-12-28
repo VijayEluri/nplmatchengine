@@ -1,5 +1,9 @@
 package bom;
 
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
 public class Document {
 	private int supplierId;
 	private String an;
@@ -7,8 +11,25 @@ public class Document {
 	private Xnpl xnpl;
 	private Author author;
 	private Title title;
+	private HashMap matchElements;
 	
-	
+	public Document(int supplierId, String an, String doi, String xnpl, String author, String title) throws IOException {
+		matchElements = new HashMap();
+		
+		this.supplierId=supplierId;
+		this.an=an;
+
+		if(null!=doi) {
+			this.doi=new Doi(doi);
+			matchElements.put(99, doi);
+		} else {
+			this.xnpl=new Xnpl(xnpl);
+			this.title=new Title(title);
+			this.author=new Author(author);
+		}
+		
+		
+	}
 	
 	public int getSupplierId() {
 		return supplierId;

@@ -3,6 +3,10 @@ package bom;
 public class Doi {
 	private String doi;
 
+	public Doi(String doi) {
+		this.doi=doi;
+	}
+
 	public String getDoi() {
 		return doi;
 	}
