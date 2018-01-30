@@ -2,7 +2,6 @@ package bom;
 
 import java.io.IOException;
 
-import analysis.TitleAnalyzer;
 
 
 public class Title {
@@ -11,7 +10,7 @@ public class Title {
 
 	public Title(String title) throws IOException {
 		this.title=title;
-		this.titleCode=TitleAnalyzer.getAnalyzer().analyze(title);
+		this.titleCode=title;
 	}
 
 	public void setTitle(String title) {

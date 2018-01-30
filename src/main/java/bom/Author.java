@@ -2,7 +2,6 @@ package bom;
 
 import java.io.IOException;
 
-import analysis.AuthorAnalyzer;
 
 
 public class Author {
@@ -11,7 +10,7 @@ public class Author {
 
 	public Author(String name) throws IOException {
 			setName(name);
-			authorCode=AuthorAnalyzer.getAnalyzer().analyze(name);
+			authorCode=name;
 	}
 
 	public void setName(String name) {
