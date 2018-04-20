@@ -52,7 +52,6 @@
     <version>7.2.1</version>
 </dependency>
   </dependencies>
-  <plugins>
   <plugin>
             <artifactId>maven-compiler-plugin</artifactId>
             <configuration>
@@ -60,5 +59,4 @@
                 <target>1.6</target>
             </configuration>
         </plugin>
-  </plugins>
 </project>
