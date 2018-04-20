@@ -7,6 +7,7 @@ import java.io.IOException;
 public class Title {
 	private String title;
 	private String titleCode;
+	private String titleCodeTest;
 
 	public Title(String title) throws IOException {
 		this.title=title;
